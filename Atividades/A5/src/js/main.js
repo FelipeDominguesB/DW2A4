@@ -68,7 +68,20 @@ form.addEventListener('submit', (e) =>{
         alert("CEP Incompleto");
         return;
     }
+    let pessoa = {};
+    [...document.querySelectorAll('[data-js]')].forEach((element) =>{
+        pessoa[element.id] = element.value;
+    });
+    
 
-    alert("Informações corretas")
+    let pageBreak = "\r\n";
+    let alerta = "Dados salvos" + pageBreak 
+    + "Nome completo: " + pessoa.nome + pageBreak
+    + "CPF: " + pessoa.cpf + pageBreak
+    + "E-Mail: " + pessoa.email + pageBreak
+    + "Data de Nascimento: " + pessoa.dt_nasc + pageBreak
+    + "Telefone: " + pessoa.fone + pageBreak
+    + "CEP: " + pessoa.cep + pageBreak
+    alert(alerta);
 
 });
