@@ -1,6 +1,6 @@
 export class Validators{
 
-    validateGenericNumberic(value, size)
+    async validateGenericNumberic(value, size)
     {
         value = value.replace(/\D/g, '');
         return value.length == size;
