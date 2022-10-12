@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificação de imagens com ML5.Js</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Classificação de imagens com MobileNet</h1>
+    <label>Selecione sua foto: </label>
+    
+    <input type="file">
+    
+    <div class="content">
+        <img style="display: none; " id="image" src="">
+        <div class="table-exhibit">
+            <table style="display: none;">
+                <thead>
+                    <th>Objeto</th>
+                    <th>Nível de confiança</th>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>Parking Meter</td>
+                        <td>0.99999995</td>
+                    </tr>
+                    <tr>
+                        <td>Parking Meter</td>
+                        <td>Mask</td>
+                    </tr>
+                    <tr>
+                        <td>Parking Meter</td>
+                        <td>Mask</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
