@@ -8,6 +8,14 @@ function carregou() {
 function classifyImage()
 {
   classifier.classify(document.getElementById('image'), (err, results) => {
+    if(err)
+    {
+      alert("Erro ao analisar imagem!");
+      return;
+    }
+
+    console.log(results);
+    
     let tableBody = document.querySelector('tbody');
     tableBody.innerHTML = '';
     
@@ -16,6 +24,7 @@ function classifyImage()
     });
 
     document.querySelector('table').style.display = 'table'
+    
   });
 
 }
